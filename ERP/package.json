@@ -1,0 +1,17 @@
+{
+  "name": "erp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ailton de Souza Junior",
+  "license": "ISC",
+  "dependencies": {
+    "datatables.net": "^1.11.3",
+    "datatables.net-dt": "^1.11.3",
+    "express": "^4.17.1",
+    "jquery": "^3.6.0"
+  }
+}

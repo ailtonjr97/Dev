@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+  <link rel="stylesheet" href="/public/css/dashboard.css">
+  <link rel="stylesheet" href="/public/css/ramais.css">
+  <script src="https://kit.fontawesome.com/9ba3f6cb6e.js" crossorigin="anonymous"></script>
+  <title>Intranet Fibracem</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-ligh" id='navbar-acima'>
+    <div class="container-fluid" id='navbar-acima2'>
+      <button type="button" id="sidebarCollapse" class="btn btn-info">
+        <i class="fas fa-align-left"></i>
+        <span>Barra de Navegação</span>
+      </button>
+        <div id='logo-fibra'>
+          <a href="/">
+            <img src="/public/images/fibracem.png" alt="Logo Fibracem" class='logo-fibracem'>
+          </a>
+        </div>
+      <button type="button" class="btn btn-warning" id='troca-senha'>Trocar Senha</button>
+      <div class="p-2" id='botoes-top'>
+        <button type="button" class="btn btn-warning">Trocar Senha</button>
+        <button type="button" class="btn btn-danger">Sair</button>
+      </div>
+    </div>
+  </nav>
+  <div class="wrapper">
+    <nav id="sidebar">
+      <ul class="list-unstyled components" id='topSidebar'>
+        <li>
+          <a href="#informacionalSubmenu" data-toggle="collapse" aria-expanded="false">Informacional</a>
+          <ul class="collapse list-unstyled" id="informacionalSubmenu">
+            <li>
+              <a href="ramais.html">Ramais</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false">Relatórios</a>
+          <ul class="collapse list-unstyled" id="relatoriosSubmenu">
+            <li>
+              <a href="relatorioschamadosfechados.html">Chamados Fechados</a>
+            </li>
+            <li>
+              <a href="relatorioscargaatual.html">Carga Atual</a>
+            </li>
+            <li>
+              <a href="relatoriosanalistaxcategoria.html">Analista X Categoria</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false">Usuários</a>
+          <ul class="collapse list-unstyled" id="usuariosSubmenu">
+            <li>
+              <a href="usuariosnovousuario.html">Novo Usuário</a>
+            </li>
+            <li>
+              <a href="usuariosusuariosativos.html">Usuários Ativos</a>
+            </li>
+            <li>
+              <a href="usuariosusuariosinativos.html">Usuários Inativos</a>
+            </li>
+            <li>
+              <a href="usuariossetores.html">Setores</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#qualidadeSubmenu" data-toggle="collapse" aria-expanded="false">Qualidade</a>
+          <ul class="collapse list-unstyled" id="qualidadeSubmenu">
+            <li>
+              <a href="qualidaderegistrarimagens.html">Registrar Imagens</a>
+            </li>
+            <li>
+              <a href="qualidadefotoscpnc.html">Fotos CPNC</a>
+            </li>
+            <li>
+              <a href="qualidadeabrirsolicitacao.html">Abrir Solicitação</a>
+            </li>
+            <li>
+              <a href="qualidademinhassolicitacoes.html">Minhas Solicitações</a>
+            </li>
+            <li>
+              <a href="qualidademinhastarefas.html">Minhas Tarefas</a>
+            </li>
+            <li>
+              <a href="qualidadegerirsolicitacoes.html">Gerir Solicitações</a>
+            </li>
+            <li>
+              <a href="qualidadefinalizados.html">Finalizados</a>
+            </li>
+            <li>
+              <a href="qualidadeconfigurarsetores.html">Configurar Setores</a>
+            </li>
+            <li>
+              <a href="qualidadecadastrarmotivoscpnc.html">Cadastrar Motivos CPNC</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#marketingSubmenu" data-toggle="collapse" aria-expanded="false">Marketing</a>
+          <ul class="collapse list-unstyled" id="marketingSubmenu">
+            <li>
+              <a href="marketingenviospesquisapormes.html">Envios Pesquisa por Mês</a>
+            </li>
+            <li>
+              <a href="marketingenviospesquisaporpedido.html">Envios Pesquisa por Pedido</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#documentosSubmenu" data-toggle="collapse" aria-expanded="false">Documentos</a>
+          <ul class="collapse list-unstyled" id="documentosSubmenu">
+            <li>
+              <a href="documentosgerardocumentos.html">Gerar Documentos</a>
+            </li>
+            <li>
+              <a href="documentosparaaprovacao.html">Para Aprovação</a>
+            </li>
+            <li>
+              <a href="documentosminhasemissoes.html">Minhas Emissões</a>
+            </li>
+            <li>
+              <a href="documentosemissoesdosetor.html">Emissões do Setor</a>
+            </li>
+            <li>
+              <a href="documentosalterarroteiro.html">Alterar Roteiro</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#segurancaSubmenu" data-toggle="collapse" aria-expanded="false">Segurança do Trabalho</a>
+          <ul class="collapse list-unstyled" id="segurancaSubmenu">
+            <li>
+              <a href="segurancasolicitacoes.html">Solicitações</a>
+            </li>
+            <li>
+              <a href="segurancasolicitar.html">Solicitar</a>
+            </li>
+            <li>
+              <a href="segurancasolicitacoesabertas.html">Solicitações Abertas</a>
+            </li>
+            <li>
+              <a href="segurancafinalizados.html">Finalizados</a>
+            </li>
+            <li>
+              <a href="segurancagerirsolicitacoes.html">Gerir Solicitações</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#rhSubmenu" data-toggle="collapse" aria-expanded="false">Recursos Humanos</a>
+          <ul class="collapse list-unstyled" id="rhSubmenu">
+            <li>
+              <a href="rhsolicitar.html">Solicitar</a>
+            </li>
+            <li>
+              <a href="rhminhassolicitacoes.html">Minhas Solicitações</a>
+            </li>
+            <li>
+              <a href="rhsolicitacoes.html">Solicitações</a>
+            </li>
+            <li>
+              <a href="rharquivados.html">Arquivados</a>
+            </li>
+            <li>
+              <a href="rhemterceiros.html">Em Terceiros</a>
+            </li>
+            <li>
+              <a href="rhgerirsolicitacoes.html">Gerir Solicitações</a>
+            </li>
+            <li>
+              <a href="rhcriardocumentoslgpd.html">Criar Documentos - LGPD</a>
+            </li>
+            <li>
+              <a href="rhvisualizarcriadoslgpd.html">Visualizar Criados - LGPD</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#lgpdSubmenu" data-toggle="collapse" aria-expanded="false">LGPD</a>
+          <ul class="collapse list-unstyled" id="lgpdSubmenu">
+            <li>
+              <a href="lgpdcriardocumentoslgpd.html">Criar Documentos - LGPD</a>
+            </li>
+            <li>
+              <a href="lgpdvisualizarcriadoslgpd.html">Visualizar Criados - LGPD</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#tecnologiaSubmenu" data-toggle="collapse" aria-expanded="false">Tecnologia da Informação</a>
+          <ul class="collapse list-unstyled" id="tecnologiaSubmenu">
+            <li>
+              <a href="timeuschamados.html">Meus Chamados</a>
+            </li>
+            <li>
+              <a href="tiabrirchamado.html">Abrir Chamado</a>
+            </li>
+            <li>
+              <a href="tiaprovardesenvolvimento.html">Aprovar Desenvolvimento</a>
+            </li>
+            <li>
+              <a href="tigerenciarchamados.html">Gerenciar Chamados</a>
+            </li>
+            <li>
+              <a href="tiemterceiros.html">Em Terceiros</a>
+            </li>
+            <li>
+              <a href="tifinalizados.html">Finalizados</a>
+            </li>
+            <li>
+              <a href="tioperacoes.html">Operações</a>
+            </li>
+            <li>
+              <a href="tinovaoperacao.html">Nova Operação</a>
+            </li>
+            <li>
+              <a href="tiinstrucoes.html">Instruções</a>
+            </li>
+            <li>
+              <a href="ticadastrarinstrucao.html">Cadastrar Instrução</a>
+            </li>
+            <li>
+              <a href="timovimentacoesdecomponentes.html">Movimentações de Componentes</a>
+            </li>
+            <li>
+              <a href="tichamadosdesenvolvimento.html">Chamados Desenvolvimento</a>
+            </li>
+            <li>
+              <a href="tichamadosrecorrentes.html">Chamados Recorrentes</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#manutpredSubmenu" data-toggle="collapse" aria-expanded="false">Manutenção Predial</a>
+          <ul class="collapse list-unstyled" id="manutpredSubmenu">
+            <li>
+              <a href="manutpredsolicitar.html">Solicitar</a>
+            </li>
+            <li>
+              <a href="manutpredminhassolicitacoes.html">Minhas Solicitaçoes</a>
+            </li>
+            <li>
+              <a href="manutpredsolicitacoesparaaprovar.html">Solicitações para Aprovar</a>
+            </li>
+            <li>
+              <a href="manutpredsolicitacoes.html">Solicitaçoes</a>
+            </li>
+            <li>
+              <a href="manutpredfinalizados.html">Finalizados</a>
+            </li>
+            <li>
+              <a href="manutpredemterceiros.html">Em Terceiros</a>
+            </li>
+            <li>
+              <a href="manutpredmovimentacoesdecomponentes.html">Movimentações de Componentes</a>
+            </li>
+            <li>
+              <a href="manutpredgerirsolicitacoes.html">Gerir Solicitações</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#manutindSubmenu" data-toggle="collapse" aria-expanded="false">Manutenção Industrial</a>
+          <ul class="collapse list-unstyled" id="manutindSubmenu">
+            <li>
+              <a href="manutindsolicitar.html">Solicitar</a>
+            </li>
+            <li>
+              <a href="manutindminhassolicitacoes.html">Minhas Solicitaçoes</a>
+            </li>
+            <li>
+              <a href="manutindsolicitacoes.html">Solicitações</a>
+            </li>
+            <li>
+              <a href="manutindfinalizados.html">Finalizados</a>
+            </li>
+            <li>
+              <a href="manutindterceiros.html">Terceiros</a>
+            </li>
+            <li>
+              <a href="manutindmovimentacoesdecomponentes.html">Movimentações de Componentes</a>
+            </li>
+            <li>
+              <a href="manutindgerirsolicitacoes.html">Gerir Solicitações</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#financeiroSubmenu" data-toggle="collapse" aria-expanded="false">Financeiro</a>
+          <ul class="collapse list-unstyled" id="financeiroSubmenu">
+            <li>
+              <a href="financeiroviagens.html">Viagens</a>
+            </li>
+            <li>
+              <a href="financeirogestorviagens.html">Gestor Viagens</a>
+            </li>
+            <li>
+              <a href="financeirocontas.html">Contas</a>
+            </li>
+            <li>
+              <a href="financeirocadastros.html">Cadastros</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#reservasSubmenu" data-toggle="collapse" aria-expanded="false">Reservas</a>
+          <ul class="collapse list-unstyled" id="reservasSubmenu">
+            <li>
+              <a href="reservassaladereuniao.html">Sala de reunião</a>
+            </li>
+            <li>
+              <a href="reservasveiculos.html">Veículos</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#portariaSubmenu" data-toggle="collapse" aria-expanded="false">Portaria Fiscal</a>
+          <ul class="collapse list-unstyled" id="portariaSubmenu">
+            <li>
+              <a href="agendarrecebimento.html">Agendar Recebimento</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#workflowSubmenu" data-toggle="collapse" aria-expanded="false">Workflow</a>
+          <ul class="collapse list-unstyled" id="workflowSubmenu">
+            <li>
+              <a href="workflowaprovarsolicitacoes.html">Aprovar Solicitações</a>
+            </li>
+            <li>
+              <a href="workflowsolicitacoes.html">Solicitações</a>
+            </li>
+            <li>
+              <a href="workflowconfiguracoes.html">Configurações</a>
+            </li>
+            <li>
+              <a href="workflowparametros.html">Parâmetros</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#relatSubmenu" data-toggle="collapse" aria-expanded="false">Relatórios</a>
+          <ul class="collapse list-unstyled" id="relatSubmenu">
+            <li>
+              <a href="relatorios2relatoriodeproduto.html">Relatório de Produto</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#controladoriaSubmenu" data-toggle="collapse" aria-expanded="false">Controladoria</a>
+          <ul class="collapse list-unstyled" id="controladoriaSubmenu">
+            <li>
+              <a href="controladoriasolicitacoes.html">Solicitações</a>
+            </li>
+            <li>
+              <a href="controladoriasolicitar.html">Solicitar</a>
+            </li>
+            <li>
+              <a href="controladoriasolicitacoesabertas.html">Solicitações Abertas</a>
+            </li>
+            <li>
+              <a href="controladoriafinalizados.html">Finalizados</a>
+            </li>
+            <li>
+              <a href="controladoriaprodutosajustados.html">Produtos Ajustados</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#processosSubmenu" data-toggle="collapse" aria-expanded="false">Processos</a>
+          <ul class="collapse list-unstyled" id="processosSubmenu">
+            <li>
+              <a href="processossolicitacoes.html">Solicitações</a>
+            </li>
+            <li>
+              <a href="processossolicitar.html">Solicitar</a>
+            </li>
+            <li>
+              <a href="processossolicitacoesabertas.html">Solicitações Abertas</a>
+            </li>
+            <li>
+              <a href="processosfinalizados.html">Finalizados</a>
+            </li>
+            <li>
+              <a href="processosgerenciar.html">Gerenciar</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#pcpSubmenu" data-toggle="collapse" aria-expanded="false">PCP</a>
+          <ul class="collapse list-unstyled" id="pcpSubmenu">
+            <li>
+              <a href="pcplistas.html">Listas</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="wrapper" id='conteudo'>
+      <div id='pagina-interior'>
+        <iframe src="http://192.168.0.85/documentos/painel"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Popper.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <!-- jQuery Custom Scroller CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script type="text/javascript" src='public/sidebar.js'>
+
+  </script>
+</body>
+
+</html>

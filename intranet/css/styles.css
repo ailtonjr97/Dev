@@ -1,0 +1,23 @@
+#row2{
+  height: 25px;
+}
+
+#row3{
+  margin: 0;
+}
+
+#botao_exclui-quali{
+  margin: 10px 0;
+}
+
+#tabela_qualidade{
+  background-color: #D7E9F7;
+  margin: 0 0 4px 0;
+  padding: 0;
+  border: 0;
+  border-radius: 15px;
+}
+
+#resultado{
+  margin-bottom: 5px;
+}

@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSRF Token -->
+  <meta name="csrf-token" content="9l18wGJ6hRhplMvQaY11uD5UYb2w5XCDnuXtb0Fi">
+
+  <title>Intranet Fibracem</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="http://intranet.fibracem.com/js/dashboard.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+  <!-- Fonts -->
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <!-- Styles -->
+  <link href="http://intranet.fibracem.com/css/app.css" rel="stylesheet">
+  <link href="http://intranet.fibracem.com/css/dashboard.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+  <script>
+    window.onload = diminui_zoom;
+
+    function diminui_zoom() {
+      document.body.style.zoom = "75%";
+    }
+  </script>
+
+  <script type="text/javascript">
+    $(window).on("load", function() {
+      $("#loader").fadeOut("slow");
+      window.setInterval(pesquisa_novo_req_aprov, 9999);
+    });
+
+    function pesquisa_novo_req_aprov() {
+
+      $('#pesquisa_novo_req_aprov').html("");
+
+      $.get("/api/chamados/pendencia/aprovacao/431", function(produto) {
+        for (u = 0; u < produto.length; u++) {
+
+
+          html = "<a  class='alert alert-success' href='http://intranet.fibracem.com/chamados/aprovacao/gestor' data-toggle='tooltip' data-placement='right' title='Você tem " + produto[u] + " solicitações para aprovar!'> Você tem " + produto[u] +
+            " solicitações para aprovar!</a> " +
+            "&nbsp;&nbsp;&nbsp;";
+
+
+          if (produto[u] > 0) {
+            $('#pesquisa_novo_req_aprov').html(html);
+          };
+
+        }
+
+      });
+
+    }
+
+
+    function Imprimi() {
+
+      $('#menu').hide();
+      $('#imprimir').hide();
+      $('#link1').hide();
+      window.print()
+      $('#menu').show();
+      $('#imprimir').show();
+      $('#link1').show();
+
+    }
+  </script>
+
+</head>
+
+<body>
+  <style>
+    .loader {
+      border: 16px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 16px solid #3498db;
+      width: 120px;
+      height: 120px;
+      -webkit-animation: spin 2s linear infinite;
+      /* Safari */
+      animation: spin 2s linear infinite;
+    }
+
+    /* Safari */
+    @-webkit-keyframes spin {
+      0% {
+        -webkit-transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+  <div class="modal" id="loader" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+
+    <center>
+      <div class="loader"></div>
+    </center>
+
+  </div>
+
+
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggler pull-left" data-toggle="collapse" data-target="#myNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="http://intranet.fibracem.com/,">Intranet Fibracem</a>
+      </div>
+      <ul class="navbar-nav">
+
+
+
+
+        <div class='row'>
+
+          <div id='pesquisa_novo_req_aprov'></div>
+
+          <a href="javascript:history.back()" data-toggle="tooltip" data-placement="right" title="Voltar uma pagina.">
+            <img src=" http://intranet.fibracem.com/storage/images/anterior.png ">
+          </a> &nbsp;&nbsp;&nbsp;
+
+          <a href="javascript: history.go(1)" data-toggle="tooltip" data-placement="right" title="Avançar uma pagina.">
+            <img src=" http://intranet.fibracem.com/storage/images/proximo.png ">
+          </a> &nbsp;&nbsp;&nbsp;
+
+          <a id='imprimir' onClick="Imprimi()" data-toggle="tooltip" data-placement="right" title="Imprimir a página atual.">
+            <img src=" http://intranet.fibracem.com/storage/images/impressora.png ">
+          </a> &nbsp;&nbsp;&nbsp;
+
+
+          <a id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-placement="right" title="Mais">
+            <img src=" http://intranet.fibracem.com/storage/images/mais.png ">
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+            <a class=" dropdown-item " href="http://intranet.fibracem.com/logout" onclick="event.preventDefault();
+                                          document.getElementById('logout-form').submit();">
+              Sair
+            </a>
+            <div class="dropdown-divider"></div>
+
+            <a class="  dropdown-item" href="http://intranet.fibracem.com/register/alter">
+              Alterar Senha
+            </a>
+          </div>
+
+
+
+        </div>
+
+        <form id="logout-form" action="http://intranet.fibracem.com/logout" method="POST" style="display: none;">
+          <input type="hidden" name="_token" value="9l18wGJ6hRhplMvQaY11uD5UYb2w5XCDnuXtb0Fi">
+        </form>
+
+      </ul>
+    </div>
+  </nav>
+  <div class="main">
+    <div id="menu" class="menu-open">
+      <ul class="list-unstyled components">
+        <li>
+          <a href="#chamadosSubmenuRamais" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            Informacional
+          </a>
+          <ul class="collapse list-unstyled" id="chamadosSubmenuRamais">
+            <li>
+
+              <a href=" http://intranet.fibracem.com/ramais">Ramais</a>
+
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li>
+          <a href="#usersSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            Usuários
+          </a>
+          <ul class="collapse list-unstyled" id="usersSubmenu">
+            <li>
+              <a href="http://intranet.fibracem.com/register">Novo Usuário</a>
+            </li>
+            <li>
+              <a href="http://intranet.fibracem.com/usuarios">Usuários Ativos</a>
+            </li>
+            <li>
+              <a href="http://intranet.fibracem.com/usuarios/inactive">Usuários Inativos</a>
+            </li>
+            <li>
+              <a href="http://intranet.fibracem.com/setores">Setores</a>
+            </li>
+          </ul>
+        </li>
+
+
+
+        <!--
+                  <li>
+                      <a href="#financeiroSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                          <i class="fas fa-angle-down"></i>
+                          Financeiro
+                      </a>
+
+                              <ul class="collapse list-unstyled" id="financeiroSubmenu">
+                                  <li>
+                                      <a href="http://intranet.fibracem.com/solicitacao_hospedagem">Viagens</a>
+                                  </li>
+                              </ul>
+
+
+
+                  </li>
+
+           -->
+        <li>
+          <a href="#qualidadeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            Qualidade
+          </a>
+
+          <ul class="collapse list-unstyled" id="qualidadeSubmenu">
+            <li>
+              <a href="http://intranet.fibracem.com/qualidade/imagens">Registrar Imagens</a>
+              <a href="solicitar_qualidade.html">Solicitar</a>
+              <a href="#">Minha Solicitações</a>
+              <a href="#">Solicitações para aprovar</a>
+            </li>
+          </ul>
+          <!--
+                              <ul class="collapse list-unstyled" id="qualidadeSubmenu">
+                                  <li>
+                                       <a href="http://intranet.fibracem.com/reservas/locais/4">Solicitação serviços <br>ao laboratório</a>
+                                  </li>
+                              </ul>
+
+  /-->
+        </li>
+
+
+
+
+
+        <li>
+          <a href="#documentoSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            Documentos
+          </a>
+
+          <ul class="collapse list-unstyled" id="documentoSubmenu">
+            <li>
+              <a href="http://intranet.fibracem.com/documentos">Gerar Documentos</a>
+            </li>
+          </ul>
+
+
+          <ul class="collapse list-unstyled" id="documentoSubmenu">
+            <li>
+              <a href="http://intranet.fibracem.com/documentos/painel">Para Aprovação</a>
+            </li>
+          </ul>
+
+          <ul class="collapse list-unstyled" id="documentoSubmenu">
+            <li>
+              <a href="http://intranet.fibracem.com/documentos/painel/emissor">Minhas Emissões </a>
+            </li>
+          </ul>
+
+
+          <ul class="collapse list-unstyled" id="documentoSubmenu">
+            <li>
+              <a href="http://intranet.fibracem.com/documentos/painel/gerencial">Emissões do Setor</a>
+            </li>
+          </ul>
+
+
+          <ul class="collapse list-unstyled" id="documentoSubmenu">
+            <li>
+              <a href="http://intranet.fibracem.com/documentos/altarar/roteiros">Alterar Roteiro</a>
+            </li>
+          </ul>
+
+        </li>
+        <li>
+          <a href="#SEGTRABSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            Segurança do Trabalho
+          </a>
+          <ul class="collapse list-unstyled" id="SEGTRABSubmenu">
+            <li>
+
+              <a href="http://intranet.fibracem.com/chamados/7">Solicitações</a>
+              <a href="http://intranet.fibracem.com/chamados/create_setor/7">Solicitar</a>
+
+
+
+            </li>
+          </ul>
+        </li>
+
+
+        <li>
+          <a href="#RHSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            Recursos Humanos
+          </a>
+
+
+          <ul class="collapse list-unstyled" id="RHSubmenu">
+            <li>
+              <a href="http://intranet.fibracem.com/chamados/create_setor/4">Solicitar</a>
+            </li>
+          </ul>
+
+          <ul class="collapse list-unstyled" id="RHSubmenu">
+            <li>
+              <a href="http://intranet.fibracem.com/chamados/4">Minhas Solicitações</a>
+            </li>
+          </ul>
+
+
+
+        </li>
+        <li>
+          <a href="#LGPDSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            LGPD
+          </a>
+
+
+        </li>
+
+
+
+
+
+
+
+
+
+        <li>
+          <a href="#chamadosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            Tecnologia da Informação
+          </a>
+          <ul class="collapse list-unstyled" id="chamadosSubmenu">
+            <li>
+
+              <a href="http://intranet.fibracem.com/chamados/1">Meus Chamados</a>
+              <a href="http://intranet.fibracem.com/chamados/create_setor/1">Abrir Chamado</a>
+              <a href="http://intranet.fibracem.com/chamados/aprovar/gestor">Aprovar Desenvolvimentos</a>
+
+
+
+              <a href="http://intranet.fibracem.com/chamados/editar/1">Gerenciar Chamados</a>
+              <a href="http://intranet.fibracem.com/chamados/terceiros/1">Em Terceiros</a>
+              <a href="http://intranet.fibracem.com/chamados/TodosChamados/1/0/50/1/0">Finalizados</a>
+              <a href="http://intranet.fibracem.com/operacoes">Operações</a>
+              <a href="http://intranet.fibracem.com/operacoes/create">Nova Operações</a>
+              <a href="http://intranet.fibracem.com/instrucao/create">Cadastrar instrução</a>
+              <a href="http://intranet.fibracem.com/instrucao">Instruções</a>
+              <a href="http://intranet.fibracem.com/chamados/componente/movimentacao/saldo/1">Movimentações de <br>Componentes</a>
+              <a href="http://intranet.fibracem.com/chamados/categoria/desenvolvimento">Chamados <br>Desenvolvimento</a>
+
+
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li>
+          <a href="#ManutPredSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            Manutenção Predial
+          </a>
+
+          <ul class="collapse list-unstyled" id="ManutPredSubmenu">
+            <li>
+              <a href="http://intranet.fibracem.com/chamados/create_setor/2">Solicitar</a>
+            </li>
+          </ul>
+
+          <ul class="collapse list-unstyled" id="ManutPredSubmenu">
+            <li>
+              <a href="http://intranet.fibracem.com/chamados/2">Minhas Solicitações</a>
+              <a href="http://intranet.fibracem.com/chamados/aprovar/gestor">Solicitações para Aprovar</a>
+            </li>
+          </ul>
+
+        </li>
+
+
+        <li>
+          <a href="#ManutIndSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            Manutenção Industrial
+          </a>
+
+          <ul class="collapse list-unstyled" id="ManutIndSubmenu">
+            <li>
+              <a href="http://intranet.fibracem.com/chamados/create_setor/3">Solicitar</a>
+            </li>
+          </ul>
+
+          <ul class="collapse list-unstyled" id="ManutIndSubmenu">
+            <li>
+              <a href="http://intranet.fibracem.com/chamados/3">Minhas Solicitações</a>
+            </li>
+          </ul>
+
+
+
+        </li>
+
+
+        <li>
+          <a href="#finanSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            Financeiro
+          </a>
+          <ul class="collapse list-unstyled" id="finanSubmenu">
+
+
+            <a href="#viagemSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+              <i class="fas fa-angle-down"></i>
+              Viagens
+            </a>
+            <ul class="collapse list-unstyled" id="viagemSubmenu">
+
+              <li>
+                <a href="http://intranet.fibracem.com/solicitacao_hospedagem/requisitar"> - Solicitar Nova Viagem</a>
+              </li>
+
+              <li>
+                <a href="http://intranet.fibracem.com/solicitacao_hospedagem/solicitacoes"> - Minhas Solicitações</a>
+              </li>
+
+              <li>
+                <a href="http://intranet.fibracem.com/solicitacao_hospedagem/aprovar/solicitacoes"> - Aprovar Solicitações</a>
+              </li>
+
+            </ul>
+          </ul>
+
+        </li>
+
+
+        <li>
+          <a href="#ReservaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            Reservas
+          </a>
+
+          <ul class="collapse list-unstyled" id="ReservaSubmenu">
+            <li>
+              <a href="http://intranet.fibracem.com/reservas/locais/1">Sala de Reunião</a>
+            </li>
+          </ul>
+
+          <ul class="collapse list-unstyled" id="ReservaSubmenu">
+            <li>
+              <a href="http://intranet.fibracem.com/reservas/locais/2"> Veículos</a>
+            </li>
+          </ul>
+
+
+        </li>
+
+
+        <li>
+          <a href="#PortariaFiscalSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            Portaria Fiscal
+          </a>
+
+          <ul class="collapse list-unstyled" id="PortariaFiscalSubmenu">
+            <li>
+              <a href="http://intranet.fibracem.com/reservas/locais/3">Agendar Recebimento</a>
+            </li>
+          </ul>
+
+
+        </li>
+
+
+
+
+
+
+        <li>
+          <a href="#wfs" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            WorkFlow
+          </a>
+          <ul class="collapse list-unstyled" id="wfs">
+            <li>
+
+              <!--   <a href="http://intranet.fibracem.com/chamados">Solici</a>
+                              <a href="http://intranet.fibracem.com/chamados/create_setor/1">Abrir Chamado</a>
+                              <a href="http://intranet.fibracem.com/chamados/aprovar/gestor">Aprovar Desenvolvimentos</a>
+                           -->
+
+
+              <a href="http://intranet.fibracem.com/workflow/painel/solicitacao">Solicitações</a>
+
+              <a href="http://intranet.fibracem.com/workflow/painel/gerencial">Configurações</a>
+              <a href="http://intranet.fibracem.com/parametros">Parametros</a>
+
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#relatorio_korp" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            Relatórios
+          </a>
+          <ul class="collapse list-unstyled" id="relatorio_korp">
+            <li>
+
+
+              <a href="http://intranet.fibracem.com/relatorios">Relatório de Produto</a>
+
+
+            </li>
+          </ul>
+        </li>
+
+
+
+        <li>
+          <a href="#ControladoriaSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            Controladoria
+          </a>
+          <ul class="collapse list-unstyled" id="ControladoriaSubmenu">
+            <li>
+
+              <a href="http://intranet.fibracem.com/chamados/6">Solicitações</a>
+              <a href="http://intranet.fibracem.com/chamados/create_setor/6">Solicitar</a>
+
+
+
+              <a href="http://intranet.fibracem.com/chamados/relatorio/itens">Produtos Ajustados</a>
+
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#ProcessosSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            Processos
+          </a>
+          <ul class="collapse list-unstyled" id="ProcessosSubmenu">
+            <li>
+
+              <a href="http://intranet.fibracem.com/chamados/8">Solicitações</a>
+              <a href="http://intranet.fibracem.com/chamados/create_setor/8">Solicitar</a>
+
+
+
+            </li>
+          </ul>
+        </li>
+
+
+
+
+        <li>
+          <a href="#PCPSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <i class="fas fa-angle-down"></i>
+            PCP
+          </a>
+          <ul class="collapse list-unstyled" id="PCPSubmenu">
+            <li>
+
+              <a href="http://intranet.fibracem.com/pcp">Listas</a>
+
+            </li>
+          </ul>
+        </li>
+
+
+
+
+
+        <li> <a href="#" data-toggle="collapse" aria-expanded="false"><i class="fas fa-angle-down"></i><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br></a>
+          <ul class="collapse list-unstyled" id="qualidadeSubmenu">
+            <li><a href="#"></a></li>
+          </ul>
+        </li>
+        <li> <a href="#" data-toggle="collapse" aria-expanded="false"><i class="fas fa-angle-down"></i><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br></a>
+          <ul class="collapse list-unstyled" id="qualidadeSubmenu">
+            <li><a href="#"></a></li>
+          </ul>
+        </li </ul>
+    </div>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>

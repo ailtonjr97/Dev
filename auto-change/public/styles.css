@@ -1,0 +1,3 @@
+#tabs { list-style: none; margin: 0; padding: 0; }
+#tabs li { float: left; background: #ddd; padding: 6px; }
+#tabs li.on { background: #f90; color: #fff; }

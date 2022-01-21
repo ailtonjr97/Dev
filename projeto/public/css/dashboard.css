@@ -1,0 +1,216 @@
+.navbar-brand{
+  margin: 0 0 0 30px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#logo-fibracem{
+  max-width: 70%;
+  max-height: 70%;
+}
+
+#nav-page{
+  min-width: 100%;
+  background-color: #22577A;
+}
+
+.nav-item{
+  color: black;
+  padding: 0;
+}
+
+#navbarDropdown:hover{
+  color: black;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+li.nav-item.dropdown:hover{
+  color: black;
+  border-radius: 5px;
+}
+
+#navbarDropdown{
+  border-radius: 5px;
+}
+
+li.nav-item.dropdown{
+  border-radius: 5px;
+}
+
+.dropdown:hover>.dropdown-menu {
+     display: block;
+}
+
+.nav-link{
+  color: black;
+}
+
+.dropdown-item:hover{
+  background-color: #C8E3D4;
+}
+
+#sidebarCollapse{
+  background-color: #89B5AF;
+  border-color: #89B5AF;
+}
+
+.row{
+  max-width: 100%
+}
+
+.wrapper ul {
+  font-family: 'Poppins', sans-serif;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #22577A;
+  text-align: center;
+}
+
+.wrapper li a {
+  display: block;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.wrapper li a.active {
+  background-color: #22577A;
+  color: #22577A;
+}
+
+.wrapper li a:hover:not(.active) {
+  background-color: white;
+  color: white;
+}
+
+.wrapper .card-body{
+  border-radius: 0;
+  border: none;
+  padding: 0;
+}
+
+.wrapper .dropdown-divider{
+  margin: 8px 20% 8px 20%;
+}
+
+.wrapper{
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+.wrapper #sidebar {
+    background-color: #22577A;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+}
+
+.wrapper #sidebar.active {
+    margin-left: -250px;
+}
+
+.wrapper a[data-toggle="collapse"] {
+    position: relative;
+}
+
+ .wrapper a, .wrapper a:hover, .wrapper a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.wrapper .dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.wrapper p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+.wrapper #sidebar {
+    background: #22577A;
+    transition: all 0.3s;
+}
+
+.wrapper #sidebar .sidebar-header {
+    padding: 20px;
+    background: #22577A;
+}
+
+.wrapper #sidebar ul.components {
+    border-bottom: 30px solid #22577A;
+}
+
+.wrapper #sidebar ul p {
+    padding: 10px;
+}
+
+.wrapper #sidebar ul li a {
+    padding: 10px;
+    font-size: 0.9em;
+    display: block;
+}
+
+.wrapper #sidebar ul li a:hover {
+    color: black;
+    background: #fff;
+}
+
+.wrapper #sidebar .wrapper ul .wrapper li.active > .wrapper a, .wrapper a[aria-expanded="true"] {
+    color: white;
+    background: #22577A;
+}
+.wrapper ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+}
+
+.wrapper #topSidebar{
+  z-index: 1;
+  background-color: #22577A;
+}
+
+.wrapper .list-unstyled{
+  background-color: #297F87;
+}
+
+.wrapper #navbar-acima{
+  padding-top: 0;
+  background-color: #7386D5;
+}
+
+.wrapper #navbar-acima2{
+  background-color: #22577A;
+}
+
+.wrapper #navbar-acima4{
+  background-color: #22577A;
+  justify-content: flex-end;
+}
+
+.wrapper #troca-senha{
+  display: none;
+}
+
+.wrapper #relatorioSubmenu{
+  margin-top: 7px;
+}
+
+.wrapper #logo-fibra{
+  margin-top: 10px;
+}
+
+.wrapper #botoes-top{
+  margin-top: 10px;
+}

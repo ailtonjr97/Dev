@@ -1,0 +1,148 @@
+body{
+  background-color: #D7E9F7;
+}
+
+div{
+  padding: 0;
+  margin: 0;
+}
+
+.logo-fibracem{
+  padding: 5px 0 5px 10px;
+}
+
+#barra-de-navegacao{
+  margin: 0;
+}
+
+.barra-paineis{
+  margin: 0;
+}
+
+.pesquisa-da-navbar{
+  padding-top: 10px;
+  padding-right: 25px;
+}
+
+.pesquisa-da-navbar-botao{
+  margin-left: 5px;
+}
+
+.coluna-solicitacao{
+  text-align: center;
+  margin: 30px 0 15px 0;
+  padding: 0;
+  border: none;
+}
+
+.carta-solicitacao{
+  text-align: center;
+  margin: 5px;
+}
+
+.carta-links{
+  padding: 10px;
+  text-align: center;
+  border: none;
+}
+
+.imagens-menus{
+  margin-top: 50px;
+}
+
+.carta-tira-borda{
+  border: none;
+}
+
+.carta-arruma-borda{
+  border: none;
+  background-color: #fff;
+}
+
+@media (min-width: 1000px) {
+  .coluna-logo{
+    display: none;
+  }
+  #insta-imagem-some{
+    display: none;
+  }
+}
+
+@media (max-width: 1000px){
+  #insta-imagem-some1{
+    display: none;
+  }
+}
+
+.alinhar-titulo{
+  text-align: center;
+}
+
+.imagem-politica{
+  border-radius: 50%;
+}
+
+.centralizador{
+  max-width: 100%;
+}
+
+.centralizador-smartphone{
+  max-width: 50%;
+}
+
+.coluna-politica{
+  margin: 30px 0 15px 0;
+}
+
+.cartas-paineis{
+  background-color: #D7E9F7;
+  background: inherit;
+}
+
+.centralizador-inicial{
+  max-width: 50%;
+}
+
+#esconde{
+  opacity: 0.0;
+}
+
+.carta-solicitacao:hover {
+  background-color: #FFED99;
+}
+
+.centralizador-smartphone-1{
+  max-width: 47%;
+}
+
+hr {
+  opacity: 0.0;
+}
+
+.card{
+  width: 100%;
+}
+
+i{
+  font-size: 2rem;
+}
+
+#coluna-social{
+  text-align: center;
+}
+
+a{
+  padding: 0;
+}
+
+#insta-imagem-some1, #insta-imagem-some{
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}

@@ -57,63 +57,63 @@ let ta = document.querySelectorAll('tr').length
 let restaurador = document.getElementsByClassName('restaurador');
 
 
-// for (let k = 0; k < za; k++) {
-//   let bodies = document.getElementsByTagName('tr').length
-//   let xvm = document.getElementsByClassName("removedor");
-//   let y = document.querySelectorAll('td')
-//   let ya = document.querySelectorAll('td').length
-//   let z = document.querySelectorAll('th')
-//   let za = document.querySelectorAll('th').length
-//   let restaurador = document.getElementsByClassName('restaurador');
-//   document.getElementsByClassName("removedor")[k].addEventListener("click", function(event) {
-//       z[k].style.display = "none";
-//       if(event.target.id == 'botaoId'){
-//         for(let h = 0; h < (ta - 1); h++){
-//           document.getElementsByClassName('zeroCol')[h].style.display = 'none'
-//         }
-//       } else if(event.target.id == 'botaoPrioridade'){
-//         for(let h = 0; h < (ta - 1); h++){
-//           document.getElementsByClassName('primeiraCol')[h].style.display = 'none'
-//         }
-//       } else if(event.target.id == 'botaoSetor'){
-//         for(let h = 0; h < (ta - 1); h++){
-//           document.getElementsByClassName('segundaCol')[h].style.display = 'none'
-//         }
-//       } else if(event.target.id == 'botaoArea'){
-//         for(let h = 0; h < (ta - 1); h++){
-//           document.getElementsByClassName('terceiraCol')[h].style.display = 'none'
-//         }
-//       } else if(event.target.id == 'botaoTipo'){
-//         for(let h = 0; h < (ta - 1); h++){
-//           document.getElementsByClassName('quartaCol')[h].style.display = 'none'
-//         }
-//       } else if(event.target.id == 'botaoStatus'){
-//         for(let h = 0; h < (ta - 1); h++){
-//           document.getElementsByClassName('quintaCol')[h].style.display = 'none'
-//         }
-//       } else if(event.target.id == 'botaoUrgencia'){
-//         for(let h = 0; h < (ta - 1); h++){
-//           document.getElementsByClassName('sextaCol')[h].style.display = 'none'
-//         }
-//       } else if(event.target.id == 'botaoDesignado'){
-//         for(let h = 0; h < (ta - 1); h++){
-//           document.getElementsByClassName('setimaCol')[h].style.display = 'none'
-//         }
-//       } else if(event.target.id == 'botaoDescrição'){
-//         for(let h = 0; h < (ta - 1); h++){
-//           document.getElementsByClassName('oitavaCol')[h].style.display = 'none'
-//         }
-//       } else if(event.target.id == 'botaoAcoes'){
-//         for(let h = 0; h < (ta - 1); h++){
-//           document.getElementsByClassName('nonaCol')[h].style.display = 'none'
-//         }
-//       }
-//     })
-// }
+for (let k = 0; k < za; k++) {
+  let bodies = document.getElementsByTagName('tr').length
+  let xvm = document.getElementsByClassName("removedor");
+  let y = document.querySelectorAll('td')
+  let ya = document.querySelectorAll('td').length
+  let z = document.querySelectorAll('th')
+  let za = document.querySelectorAll('th').length
+  let restaurador = document.getElementsByClassName('restaurador');
+  document.getElementsByClassName("removedor")[k].addEventListener("click", function(event) {
+      z[k].style.display = "none";
+      if(event.target.id == 'botaoId'){
+        for(let h = 0; h < (ta - 1); h++){
+          document.getElementsByClassName('zeroCol')[h].style.display = 'none'
+        }
+      } else if(event.target.id == 'botaoPrioridade'){
+        for(let h = 0; h < (ta - 1); h++){
+          document.getElementsByClassName('primeiraCol')[h].style.display = 'none'
+        }
+      } else if(event.target.id == 'botaoSetor'){
+        for(let h = 0; h < (ta - 1); h++){
+          document.getElementsByClassName('segundaCol')[h].style.display = 'none'
+        }
+      } else if(event.target.id == 'botaoArea'){
+        for(let h = 0; h < (ta - 1); h++){
+          document.getElementsByClassName('terceiraCol')[h].style.display = 'none'
+        }
+      } else if(event.target.id == 'botaoTipo'){
+        for(let h = 0; h < (ta - 1); h++){
+          document.getElementsByClassName('quartaCol')[h].style.display = 'none'
+        }
+      } else if(event.target.id == 'botaoStatus'){
+        for(let h = 0; h < (ta - 1); h++){
+          document.getElementsByClassName('quintaCol')[h].style.display = 'none'
+        }
+      } else if(event.target.id == 'botaoUrgencia'){
+        for(let h = 0; h < (ta - 1); h++){
+          document.getElementsByClassName('sextaCol')[h].style.display = 'none'
+        }
+      } else if(event.target.id == 'botaoDesignado'){
+        for(let h = 0; h < (ta - 1); h++){
+          document.getElementsByClassName('setimaCol')[h].style.display = 'none'
+        }
+      } else if(event.target.id == 'botaoDescrição'){
+        for(let h = 0; h < (ta - 1); h++){
+          document.getElementsByClassName('oitavaCol')[h].style.display = 'none'
+        }
+      } else if(event.target.id == 'botaoAcoes'){
+        for(let h = 0; h < (ta - 1); h++){
+          document.getElementsByClassName('nonaCol')[h].style.display = 'none'
+        }
+      }
+    })
+}
 
-// document.getElementsByClassName('restaurador')[0].addEventListener("click", function(){
-//   window.location.reload();
-// })
+document.getElementsByClassName('restaurador')[0].addEventListener("click", function(){
+  window.location.reload();
+})
 
 ///////////////////////////////////////////////////////////
 function fnExcelReport() {

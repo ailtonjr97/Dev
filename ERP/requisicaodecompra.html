@@ -10,8 +10,7 @@
   <meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="public/css/dashboard.css">
-  <link rel="stylesheet" href="public/css/contasapagar.css">
+  <link rel="stylesheet" href="public/css/requisicaodecompra.css">
   <link rel="stylesheet" href="public/css/ramais.css">
   <script src="https://kit.fontawesome.com/9ba3f6cb6e.js" crossorigin="anonymous"></script>
   <title>Intranet Fibracem</title>
@@ -686,7 +685,7 @@
     <div class="row" id='rowPrimeira'>
       <div class="row" id='descritivoCadastro'>
         <div class="col-lg-12">
-          <h3 class='descritivoCadastro'>Lista de Preço</h3>
+          <h3 class='descritivoCadastro'>Requisição de Compra</h3>
         </div>
       </div>
       <div class="row" id='cabecalho'>
@@ -698,108 +697,163 @@
           <button type="button" class="btn btn-danger">Excluir</button>
         </div>
       </div>
-      <div class="row" id='rowOitava'>
-        <div class="col-lg">
-          <div class="form-floating">
-            <input class="form-control" id="estoquemaxInput" type='number' required>
-            <label for="estoquemaxInput">Pesquisar:</label>
+      <div class="row" id='rowPrimeira'>
+        <div class="row" id='rowTerceira'>
+          <div class="col-lg razaoSocial">
+            <div class="form-floating">
+              <input class="form-control" id="razaosocialInput" required>
+              <label for="razaosocialInput">Razão Social:</label>
+            </div>
+          </div>
+          <div class="col-lg nome">
+            <div class="form-floating">
+              <input class="form-control" id="nomeInput" required>
+              <label for="nomeInput">Nome:</label>
+            </div>
+          </div>
+        </div>
+        <div class="row" id='rowDecima'>
+          <div class="col-lg cpfSome">
+            <div class="form-floating">
+              <input class="form-control cpfInput" id="cpfInput" required>
+              <label for="cpfInput">CPF:</label>
+            </div>
+          </div>
+          <div class="col-lg rgSome">
+            <div class="form-floating">
+              <input class="form-control rgInput" id="rgInput" type="number">
+              <label for="rgInput">RG:</label>
+            </div>
+          </div>
+          <div class="col-lg cnpjSome">
+            <div class="form-floating">
+              <input class="form-control cnpjInput" id="cnpjInput" type="number">
+              <label for="cnpjInput">CNPJ:</label>
+            </div>
+          </div>
+        </div>
+        <div class="row" id='segundaRow'>
+          <div class="col-lg">
+            <div class="form-floating">
+              <select class="form-select" id="empresaSelect" aria-label="Floating label">
+                <option value="0"></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+              <label for="floatingSelect">Empresa:</label>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="form-floating">
+              <select class="form-select" id="baseSelect" aria-label="Floating label">
+                <option value="0"></option>
+                <option value="1">FIBRACEM - CD PINHAIS</option>
+                <option value="2">FIBRACEM - ES LINHARES</option>
+                <option value="3">FIBRACEM - IMPORT ES</option>
+                <option value="4">FIBRACEM - MATRIZ</option>
+                <option value="5">FIBRACEM - PINHAIS</option>
+                <option value="6">FIBRACEM - SP JUNDIAÍ</option>
+                <option value="7">FIBRACEM IND - ES LINHARES</option>
+              </select>
+              <label for="floatingSelect">Base:</label>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="form-floating">
+              <select class="form-select" id="setorSelect" aria-label="Floating label">
+                <option value="0"></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+              <label for="floatingSelect">Setor:</label>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="form-floating">
+              <select class="form-select" id="ccSelect" aria-label="Floating label">
+                <option value="0"></option>
+                <option value="1">1100 - GESTÃO ADMINISTRATIVA</option>
+                <option value="2">1110 - DIRETORIA</option>
+                <option value="3">1120 - ADMINISTRATIVO FINANCEIRO</option>
+                <option value="4">1121 - MANUTENCAO PREDIAL</option>
+                <option value="5">1130 - RECURSOS HUMANOS</option>
+                <option value="6">1131 - SSMA SAUDE, SEGURANÇA E MEIO AMBIENTE</option>
+                <option value="7">1140 - TECNOLOGIA DA INFORMACAO</option>
+              </select>
+              <label for="floatingSelect">Centro de Custo:</label>
+            </div>
+          </div>
+        </div>
+        <div class="row" id='rowQuarta'>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="requisitanteInput">
+                <label for="requisitanteInput">Requisitante:</label>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="aprovadorInput" required>
+                <label for="aprovadorInput">Aprovador RC:</label>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="fcompraInput">
+                <label for="fcompraInput">Finalidade Compra:</label>
+              </div>
+          </div>
+        </div>
+        <div class="row" id='rowQuinta'>
+          <div class="col-lg">
+            <textarea name="name" rows="4" placeholder="Observação"></textarea>
           </div>
         </div>
       </div>
-      <div class="row" id='rowOnze'>
-        <div class="table-responsive" id='tabels'>
-          <table class="table table-hover">
-            <thead>
-              <tr>
-                <th scope="col">Barrar Venda Abaixo do Preço?</th>
-                <th scope="col">IdListaPreço</th>
-                <th scope="col">Revisão</th>
-                <th scope="col">Ativa</th>
-                <th scope="col">Descrição</th>
-                <th scope="col">Grupo de Permissão</th>
-                <th scope="col">Origem</th>
-                <th scope="col">Arredondamento</th>
-                <th scope="col">Usuário</th>
-                <th scope="col">Data de Criação</th>
-                <th scope="col">Preço de Venda Calculado</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  <div>
-                    <input class='check' type="checkbox" id="barraVenda" name="barraVenda">
-                    <label for="barraVenda"></label>
-                  </div>
-                </td>
-                <td>PARAFUSO INVERTIDO TRIPLO CARPADO</td>
-                <td>UN</td>
-                <td>
-                  <div>
-                    <input class='check' type="checkbox" id="ativa" name="ativa">
-                    <label for="ativa"></label>
-                  </div>
-                </td>
-                <td>25,00</td>
-                <td>14</td>
-                <td>25</td>
-                <td>80,00</td>
-                <td>80,00</td>
-                <td>80,00</td>
-                <td>
-                  <div>
-                    <input class='check' type="checkbox" id="precoVenda" name="precoVenda">
-                    <label for="precoVenda"></label>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-      <div class="row">
         <div class="col-lg">
           <div class="row" id='rowDoze'>
             <div class="table-responsive" id='tabels1'>
               <table class="table table-hover">
                 <thead>
                   <tr>
-                    <th scope="col">Cód. Produto</th>
-                    <th scope="col">Descrição</th>
-                    <th scope="col">NCM</th>
-                    <th scope="col">Un. Medida</th>
-                    <th scope="col">Custo</th>
-                    <th scope="col">Custo Com Acréscimo/Desconto</th>
-                    <th scope="col">Preço Base com Desc.</th>
-                    <th scope="col">Preço Base</th>
-                    <th scope="col">Preço de Venda</th>
-                    <th scope="col">Desconto R$</th>
-                    <th scope="col">Desconto %</th>
-                    <th scope="col">Markup %</th>
-                    <th scope="col">Preço Base com IPI</th>
-                    <th scope="col">ICMS Incluso</th>
-                    <th scope="col">Data de Registro</th>
-                    <th scope="col">Data de Validade</th>
-                    <th scope="col">Ult. Atualização Custo</th>
-                    <th scope="col">Origem</th>
-                    <th scope="col">Natureza da Operação</th>
-                    <th scope="col">Operação</th>
-                    <th scope="col">Part-Number</th>
-                    <th scope="col">Usuário</th>
-                    <th scope="col">Categoria</th>
-                    <th scope="col">Família</th>
-                    <th scope="col">Grupo</th>
-                    <th scope="col">Subgrupo</th>
-                    <th scope="col">Cód. Fornecedor</th>
-                    <th scope="col">Fornecedor</th>
-                    <th scope="col">Fabricante</th>
-                    <th scope="col">Origem (ICMS)</th>
-                    <th scope="col">CST IPI Saída</th>
-                    <th scope="col">CST PIS Saída</th>
-                    <th scope="col">CST COFINS Saída</th>
-                    <th scope="col">Custo Manual</th>
-                    <th scope="col">Tipo de Custo</th>
-                    <th scope="col">Empresa Custo</th>
+                    <th scope="col">R_E_C_N_O</th>
+                    <th scope="col">N. Item</th>
+                    <th scope="col">Situação</th>
+                    <th scope="col">Cód.</th>
+                    <th scope="col">Descrição do Produto</th>
+                    <th scope="col">Data Entrega</th>
+                    <th scope="col">Unidade</th>
+                    <th scope="col">Quantidade</th>
+                    <th scope="col">ODF da Industrialização</th>
+                    <th scope="col">C. Custo</th>
+                    <th scope="col">Moeda</th>
+                    <th scope="col">Val. Uni.</th>
+                    <th scope="col">Val. Uni. Desc.</th>
+                    <th scope="col">(%) Desconto</th>
+                    <th scope="col">Total Desconto</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Dim 1</th>
+                    <th scope="col">Dim 2</th>
+                    <th scope="col">Dim 3</th>
+                    <th scope="col">Dim Qtde</th>
+                    <th scope="col">Dim Dif. Kg</th>
+                    <th scope="col">Centro de Custo (Obrigatório)</th>
+                    <th scope="col">Cód. Conta Gerencial</th>
+                    <th scope="col">Conta Gerencial</th>
+                    <th scope="col">Conta Contábil</th>
+                    <th scope="col">Descrição Conta Contábil</th>
+                    <th scope="col">NUMPED</th>
+                    <th scope="col">LEAD TIME TOTAL</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -820,7 +874,6 @@
         </div>
       </div>
     </div>
-  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>

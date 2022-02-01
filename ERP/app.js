@@ -64,4 +64,8 @@ app.get('/listadepreco.html', function(req, res){
   res.sendFile(__dirname + '/listadepreco.html')
 })
 
+app.get('/requisicaodecompra.html', function(req, res){
+  res.sendFile(__dirname + '/requisicaodecompra.html')
+})
+
 app.listen(3000)

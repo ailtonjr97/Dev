@@ -1,4 +1,5 @@
 <!doctype html>
+<html lang="en">
 
 <head>
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
@@ -9,7 +10,8 @@
   <meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <link rel="stylesheet" href="public/css/dashboard.css">
+  <link rel="stylesheet" href="public/css/requisicaodecompra.css">
+  <link rel="stylesheet" href="public/css/ramais.css">
   <script src="https://kit.fontawesome.com/9ba3f6cb6e.js" crossorigin="anonymous"></script>
   <title>Intranet Fibracem</title>
 </head>
@@ -124,10 +126,10 @@
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="http://127.0.0.1:3000/ERP/contasapagar.html">Contas a Pagar</a></li>
               <li><a class="dropdown-item" href="http://127.0.0.1:3000/ERP/contasareceber.html">Contas a Receber</a></li>
-              <li><a class="dropdown-item" href="http://127.0.0.1:3000/ERP/fluxodecaixa.html">Fluxo de Caixa</a></li>
+              <li><a class="dropdown-item" href="#">Fluxo de Caixa</a></li>
               <li><a class="dropdown-item" href="http://127.0.0.1:3000/ERP/centrodecusto.html">Centro de Custo</a></li>
-              <li><a class="dropdown-item" href="http://127.0.0.1:3000/ERP/planodecontasgerencial.html">Plano de Contas Gerencial</a></li>
-              <li><a class="dropdown-item" href="http://127.0.0.1:3000/ERP/fundofixo.html">Prestaçao de Contas (Fundo Fixo)</a></li>
+              <li><a class="dropdown-item" href="#">Plano de Contas Gerencial</a></li>
+              <li><a class="dropdown-item" href="#">Prestaçao de Contas (Fundo Fixo)</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -137,8 +139,8 @@
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="http://127.0.0.1:3000/ERP/propostacomercial.html">Proposta Comercial (CRM)</a></li>
-              <li><a class="dropdown-item" href="http://127.0.0.1:3000/ERP/pedidodevenda.html">Pedido de Venda</a></li>
-              <li><a class="dropdown-item" href="http://127.0.0.1:3000/ERP/listadepreco.html">Lista de Preço</a></li>
+              <li><a class="dropdown-item" href="#">Pedido de Venda</a></li>
+              <li><a class="dropdown-item" href="#">Lista de Preço</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -147,8 +149,8 @@
               <span class='descricao-menu'>Compras</span>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="http://127.0.0.1:3000/ERP/requisicaodecompra.html">Requisição de Compra</a></li>
-              <li><a class="dropdown-item" href="http://127.0.0.1:3000/ERP/pedidodecompra.html">Pedido de Compra</a></li>
+              <li><a class="dropdown-item" href="#">Requisição de Compra</a></li>
+              <li><a class="dropdown-item" href="#">Pedido de Compra</a></li>
               <li><a class="dropdown-item" href="#">Cotação</a></li>
               <li><a class="dropdown-item" href="#">Entrada de NF</a></li>
               <li><a class="dropdown-item" href="#">Histórico de Entrada de NF</a></li>
@@ -306,7 +308,7 @@
     </div>
   </nav>
   <div class="wrapper">
-    <nav id="sidebar">
+    <!-- <nav id="sidebar">
       <ul class="list-unstyled components" id='topSidebar'>
         <li>
           <a href="#informacionalSubmenu" data-toggle="collapse" aria-expanded="false">Informacional</a>
@@ -679,113 +681,276 @@
           </ul>
         </li>
       </ul>
-    </nav>
-      <div class="container-fluid" id='tabela-dentro'>
-        <button type="button" class="btn btn-primary restaurador" id='botao-restaurador'>Restaurar Colunas</button>
-        <button id="btnExport" class="btn btn-warning acoes-botao" onclick="fnExcelReport();">Exportar</button>
-        <div class="table-responsive segunda-tabela">
-          <table class="table table-hover table-striped" id='myTable'>
-            <thead>
-              <tr>
-                <th scope="col">ID<button id='botaoId' type="button" class="btn btn-danger removedor del"></button></th>
-                <th scope="col">Prioridade<button id='botaoPrioridade' type="button" class="btn btn-danger removedor del"></button></th>
-                <th scope="col">Setor<button id='botaoSetor' type="button" class="btn btn-danger removedor del"></button></th>
-                <th scope="col">Área<button id='botaoArea' type="button" class="btn btn-danger removedor del"></button></th>
-                <th scope="col">Tipo<button id='botaoTipo' type="button" class="btn btn-danger removedor del"></button></th>
-                <th scope="col">Status<button id='botaoStatus' type="button" class="btn btn-danger removedor del"></button></th>
-                <th scope="col">Urgência<button id='botaoUrgencia' type="button" class="btn btn-danger removedor del"></button></th>
-                <th scope="col">Designado/Terceiro<button id='botaoDesignado' type="button" class="btn btn-danger removedor del"></button></th>
-                <th scope="col">Descrição<button id='botaoDescrição' type="button" class="btn btn-danger removedor del"></button></th>
-                <th scope='col'>Ações<button id='botaoAcoes' type="button" class="btn btn-danger removedor del"></button></th>
-              </tr>
-            </thead>
-            <tbody class='corpoTabela'>
-              <div class="alinhadora">
-                <tr>
-                  <td scope="row" class='zeroCol'>0</td>
-                  <td class='primeiraCol'>
-                    <p class='prioridadeCampo'></p>
-                    <textarea class='campoId' name="name" rows="2" cols="20" placeholder="Digite aqui a prioridade."></textarea>
-                  </td>
-                  <td class='segundaCol'>
-                    <p class='descri-tabela'></p>
-                    <label for="setorSelect"></label>
-                    <select name="setor" class='selectTotal setorSelect'>
-                      <option value=""></option>
-                      <option value="Tecnologia da Informação">Tecnologia da Informação</option>
-                      <option value="Recursos Humanos">Recursos Humanos</option>
-                      <option value="Engenharia">Engenharia</option>
-                    </select>
-                  </td>
-                  <td class='terceiraCol'>
-                    <p class='areaCampo'></p>
-                    <label for="areaSelect"></label>
-                    <select name="area" class='selectTotal areaSelect'>
-                      <option value=""></option>
-                      <option value="Redes">Redes</option>
-                      <option value="Telefonia">Telefonia</option>
-                      <option value="Software">Software</option>
-                    </select>
-                  </td>
-                  <td class='quartaCol'>
-                    <p class='tipoCampo'></p>
-                    <label for="tipoSelect"></label>
-                    <select name="tipo" class='selectTotal tipoSelect'>
-                      <option value=""></option>
-                      <option value="Liberação de Acesso">Liberação de Acesso</option>
-                      <option value="Dúvidas">Dúvidas</option>
-                      <option value="Desenvolvimento">Desenvolvimento</option>
-                    </select>
-                  </td>
-                  <td class='quintaCol'>
-                    <p>Aberto</p>
-                    <p></p>
-                  </td>
-                  <td class='sextaCol'>
-                    <p class='urgenciaCampo'></p>
-                    <label for="urgenciaSelect"></label>
-                    <select name="urgencia" class='selectTotal urgenciaSelect'>
-                      <option value=""></option>
-                      <option value="Normal">Normal</option>
-                      <option value="Urgente">Urgente</option>
-                      <option value="Crítico">Crítico</option>
-                    </select>
-                  </td>
-                  <td class='setimaCol'>
-                    <p class='designadoCampo'></p>
-                    <label for="designadoSelect"></label>
-                    <select name="designado" class='selectTotal designadoSelect'>
-                      <option value=""></option>
-                      <option value="Ailton de Souza Junior">Ailton de Souza Junior</option>
-                      <option value="Carlos Henrique">Carlos Henrique</option>
-                      <option value="Everson Saporetti">Everson Saporetti</option>
-                    </select>
-                  </td>
-                  <td class='oitavaCol'>
-                    <p>Descrição Teste</p>
-                    <p></p>
-                  </td>
-                  <td class='nonaCol'>
-                    <button type="button" class="btn btn-success acoes-botao salvar">Salvar</button>
-                    <button type="button" class="btn btn-success acoes-botao">Chat</button>
-                    <button type="button" class="btn btn-success acoes-botao editar">Editar</button>
-                    <button type="button" class="btn btn-danger acoes-botao">Aprovação</button>
-                    <p></p>
-                  </td>
-                </tr>
+    </nav> -->
+    <div class="row" id='rowPrimeira'>
+      <div class="row" id='descritivoCadastro'>
+        <div class="col-lg-12">
+          <h3 class='descritivoCadastro'>Pedido de Compra</h3>
+        </div>
+      </div>
+      <div class="row" id='cabecalho'>
+        <div class="col-lg">
+          <button type="button" class="btn btn-primary">Novo</button>
+          <button type="button" class="btn btn-primary">Salvar</button>
+          <button type="button" class="btn btn-primary">Atualizar</button>
+          <button type="button" class="btn btn-warning">Cancelar</button>
+          <button type="button" class="btn btn-danger">Excluir</button>
+        </div>
+      </div>
+      <div class="row" id='rowPrimeira'>
+        <div class="row" id='rowTerceira'>
+          <div class="col-lg razaoSocial">
+            <div class="form-floating">
+              <input class="form-control" id="razaosocialInput" required>
+              <label for="razaosocialInput">Razão Social:</label>
+            </div>
+          </div>
+        </div>
+        <div class="row" id='segundaRow'>
+          <div class="col-lg">
+            <div class="form-floating">
+              <select class="form-select" id="empresaSelect" aria-label="Floating label">
+                <option value="0"></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+              </select>
+              <label for="floatingSelect">Empresa:</label>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="form-floating">
+              <select class="form-select" id="baseSelect" aria-label="Floating label">
+                <option value="0"></option>
+                <option value="1">FIBRACEM - CD PINHAIS</option>
+                <option value="2">FIBRACEM - ES LINHARES</option>
+                <option value="3">FIBRACEM - IMPORT ES</option>
+                <option value="4">FIBRACEM - MATRIZ</option>
+                <option value="5">FIBRACEM - PINHAIS</option>
+                <option value="6">FIBRACEM - SP JUNDIAÍ</option>
+                <option value="7">FIBRACEM IND - ES LINHARES</option>
+              </select>
+              <label for="floatingSelect">Base:</label>
+            </div>
+          </div>
+          <div class="col-lg">
+            <div class="col-lg">
+                <div class="form-floating">
+                  <input class="form-control" id="PedidoInput">
+                  <label for="PedidoInput">Pedido:</label>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id='rowQuarta'>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="raSocInput">
+                <label for="raSocInput">Razão Social:</label>
               </div>
-            </tbody>
-          </table>
+          </div>
+        </div>
+        <div class="row" id='rowSexta'>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="cnpjInput">
+                <label for="cnpjInput">CNPJ:</label>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="inscEstInput">
+                <label for="inscEstInput">Insc. Estadual:</label>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="EndereçoInput">
+                <label for="EndereçoInput">Endereço:</label>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="CidadeInput">
+                <label for="CidadeInput">Cidade:</label>
+              </div>
+          </div>
+        </div>
+        <div class="row" id='rowSetima'>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="estadoInput">
+                <label for="estadoInput">Estado:</label>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="cepInput">
+                <label for="cepInput">CEP:</label>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="telefoneInput">
+                <label for="telefoneInput">Telefone:</label>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="contatoInput">
+                <label for="contatoInput">Contato:</label>
+              </div>
+          </div>
+        </div>
+        <div class="row" id='rowOitava'>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="emailInput">
+                <label for="emailInput">E-mail:</label>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="condPagInput">
+                <label for="condPagInput">Cond. Pag:</label>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="urgenInput">
+                <label for="urgenInput">Urgência:</label>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="transpInput">
+                <label for="transpInput">Transp:</label>
+              </div>
+          </div>
+        </div>
+        <div class="row" id='rowNona'>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="documentosInput">
+                <label for="documentosInput">Documentos</label>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="finaCompInput">
+                <label for="finaCompInput">Finalidade Compra:</label>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="totDescInput">
+                <label for="totDescInput">Total Desconto:</label>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="tipFreteInput">
+                <label for="tipFreteInput">Tipo Frete:</label>
+              </div>
+          </div>
+        </div>
+        <div class="row" id='rowDecima'>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="valorFreteInput">
+                <label for="valorFreteInput">Valor Frete:</label>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="observInput">
+                <label for="observInput">Observação:</label>
+              </div>
+          </div>
+          <div class="col-lg">
+              <div class="form-floating">
+                <input class="form-control" id="usuarioInput">
+                <label for="usuarioInput">Usuário:</label>
+              </div>
+          </div>
+        </div>
+        <div class="row" id='rowQuinta'>
+          <div class="col-lg">
+            <textarea name="name" rows="4" placeholder="Observação"></textarea>
+          </div>
+        </div>
+      </div>
+        <div class="col-lg">
+          <div class="row" id='rowDoze'>
+            <div class="table-responsive" id='tabels1'>
+              <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Impresso</th>
+                    <th scope="col">Enviado</th>
+                    <th scope="col">Pedido</th>
+                    <th scope="col">Fornecedor</th>
+                    <th scope="col">Cód. do Produto</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Qtde Pedido</th>
+                    <th scope="col">Saldo</th>
+                    <th scope="col">Qtde Entregue</th>
+                    <th scope="col">Val. Uni.</th>
+                    <th scope="col">Data Entrega</th>
+                    <th scope="col">Origem</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Data Negociada</th>
+                    <th scope="col">Unidade</th>
+                    <th scope="col">Moeda</th>
+                    <th scope="col">Val. Uni. Desc.</th>
+                    <th scope="col">(%)Desconto</th>
+                    <th scope="col">(%)IPI</th>
+                    <th scope="col">(%)ICMS</th>
+                    <th scope="col">Valor ICMS-ST</th>
+                    <th scope="col">N° Cotação</th>
+                    <th scope="col">Cód. Centro de Custo</th>
+                    <th scope="col">Centro de Custo</th>
+                    <th scope="col">Conta Contábil</th>
+                    <th scope="col">Descrição Conta Contábil</th>
+                    <th scope="col">Cód. Conta Gerencial</th>
+                    <th scope="col">Conta Gerencial</th>
+                    <th scope="col">Cód. Operação</th>
+                    <th scope="col">Operação Contábil</th>
+                    <th scope="col">Usuário</th>
+                    <th scope="col">Histórico</th>
+                    <th scope="col">Pedido Alterado</th>
+                    <th scope="col">NITEM</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>CO.002955</td>
+                    <td>PARAFUSO INVERTIDO TRIPLO CARPADO</td>
+                    <td>UN</td>
+                    <td>2500</td>
+                    <td>25,00</td>
+                    <td>14</td>
+                    <td>25</td>
+                    <td>80,00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script type="text/javascript" src='public/sidebar.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script type="text/javascript" src='public/propostacomercial.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 
 </html>

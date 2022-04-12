@@ -1,0 +1,1019 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="public/css/dashboard.css">
+  <link rel="stylesheet" href="public/css/centrodecusto.css">
+  <link rel="stylesheet" href="public/css/ramais.css">
+  <script src="https://kit.fontawesome.com/9ba3f6cb6e.js" crossorigin="anonymous"></script>
+  <title>Intranet Fibracem</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark" id='nav-page'>
+    <div class="container-fluid" id='container-da-navbar'>
+      <button type="button" id="sidebarCollapse" class="btn btn-info">
+        <i class="fas fa-align-left" id='sanduiche'></i>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="public/images/fibracem.png" alt="" id='logo-fibracem'>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-address-book"></i><br>
+              <span class='descricao-menu'>Cadastro</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li class='descritivo-principal'>
+                <a href="http://127.0.0.1:3000/ERP/cadastroproduto.html"><span class='descritivo-submenu'>Produto</span></a>
+                <ul class="dropdown-menu sub-menu">
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 1</li>
+                  </a>
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 2</li>
+                  </a>
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 3</li>
+                  </a>
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 4</li>
+                  </a>
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 5</li>
+                  </a>
+                </ul>
+              </li>
+              <li class='descritivo-principal'>
+                <a href="http://127.0.0.1:3000/ERP/cadastrodeservico.html"><span class='descritivo-submenu'>Serviço</span></a>
+                <ul class="dropdown-menu sub-menu">
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 6</li>
+                  </a>
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 7</li>
+                  </a>
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 8</li>
+                  </a>
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 9</li>
+                  </a>
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 10</li>
+                  </a>
+                </ul>
+              </li>
+              <li class='descritivo-principal'>
+                <a href="http://127.0.0.1:3000/ERP/cadastrocliente.html"><span class='descritivo-submenu'>Cliente</span></a>
+                <ul class="dropdown-menu sub-menu">
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 11</li>
+                  </a>
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 12</li>
+                  </a>
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 13</li>
+                  </a>
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 14</li>
+                  </a>
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 15</li>
+                  </a>
+                </ul>
+              </li>
+              <li class='descritivo-principal'>
+                <a href="http://127.0.0.1:3000/ERP/cadastrodefornecedor.html"><span class='descritivo-submenu'>Fornecedores</span></a>
+                <ul class="dropdown-menu sub-menu">
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 16</li>
+                  </a>
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 17</li>
+                  </a>
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 18</li>
+                  </a>
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 19</li>
+                  </a>
+                  <a href="#">
+                    <li class='descritivo-principal'>- Exemplo 20</li>
+                  </a>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-dollar-sign"></i><br>
+              <span class='descricao-menu'>Financeiro</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="http://127.0.0.1:3000/ERP/contasapagar.html">Contas a Pagar</a></li>
+              <li><a class="dropdown-item" href="http://127.0.0.1:3000/ERP/contasareceber.html">Contas a Receber</a></li>
+              <li><a class="dropdown-item" href="#">Fluxo de Caixa</a></li>
+              <li><a class="dropdown-item" href="http://127.0.0.1:3000/ERP/centrodecusto.html">Centro de Custo</a></li>
+              <li><a class="dropdown-item" href="#">Plano de Contas Gerencial</a></li>
+              <li><a class="dropdown-item" href="#">Prestaçao de Contas (Fundo Fixo)</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-shopping-cart"></i><br>
+              <span class='descricao-menu'>Vendas</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="http://127.0.0.1:3000/ERP/propostacomercial.html">Proposta Comercial (CRM)</a></li>
+              <li><a class="dropdown-item" href="#">Pedido de Venda</a></li>
+              <li><a class="dropdown-item" href="#">Lista de Preço</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-money-bill-alt"></i><br>
+              <span class='descricao-menu'>Compras</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Requisição de Compra</a></li>
+              <li><a class="dropdown-item" href="#">Pedido de Compra</a></li>
+              <li><a class="dropdown-item" href="#">Cotação</a></li>
+              <li><a class="dropdown-item" href="#">Entrada de NF</a></li>
+              <li><a class="dropdown-item" href="#">Histórico de Entrada de NF</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-cogs"></i><br>
+              <span class='descricao-menu'>Engenharia</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Produtos</a></li>
+              <li><a class="dropdown-item" href="#">Serviços</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-truck"></i><br>
+              <span class='descricao-menu'>Logística</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Itens Contados</a></li>
+              <li><a class="dropdown-item" href="#">Movimentação de Estoque</a></li>
+              <li><a class="dropdown-item" href="#">Inventário</a></li>
+              <li><a class="dropdown-item" href="#">MRP</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-chart-pie"></i><br>
+              <span class='descricao-menu'>Relatórios</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Faturamento</a></li>
+              <li><a class="dropdown-item" href="#">Vendas</a></li>
+              <li><a class="dropdown-item" href="#">Financeiro</a></li>
+              <li><a class="dropdown-item" href="#">Compras</a></li>
+              <li><a class="dropdown-item" href="#">Logística</a></li>
+              <li><a class="dropdown-item" href="#">PCP</a></li>
+              <li><a class="dropdown-item" href="#">Engenharia</a></li>
+              <li><a class="dropdown-item" href="#">Fiscal</a></li>
+              <li><a class="dropdown-item" href="#">Cubo de Decisão (BI)</a></li>
+              <li><a class="dropdown-item" href="#">Contábil</a></li>
+              <li><a class="dropdown-item" href="#">Faturamento</a></li>
+              <li><a class="dropdown-item" href="#">Vendas</a></li>
+              <li><a class="dropdown-item" href="#">Financeiro</a></li>
+              <li><a class="dropdown-item" href="#">Compras</a></li>
+              <li><a class="dropdown-item" href="#">Logística</a></li>
+              <li><a class="dropdown-item" href="#">PCP</a></li>
+              <li><a class="dropdown-item" href="#">Engenharia</a></li>
+              <li><a class="dropdown-item" href="#">Fiscal</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-phone"></i><br>
+              <span class='descricao-menu'>Contato</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="http://192.168.0.85/ramais">Colaboradores Fibracem</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown ocultar-menu">
+            <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-cogs"></i><br>
+              <span class='descricao-menu'>Configurações</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Produtos</a></li>
+              <li><a class="dropdown-item" href="#">Serviços</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown ocultar-menu">
+            <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-cogs"></i><br>
+              <span class='descricao-menu'>Configurações</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Produtos</a></li>
+              <li><a class="dropdown-item" href="#">Serviços</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown ocultar-menu">
+            <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-cogs"></i><br>
+              <span class='descricao-menu'>Configurações</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Produtos</a></li>
+              <li><a class="dropdown-item" href="#">Serviços</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown ocultar-menu">
+            <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-cogs"></i><br>
+              <span class='descricao-menu'>Configurações</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Produtos</a></li>
+              <li><a class="dropdown-item" href="#">Serviços</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown ocultar-menu">
+            <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-cogs"></i><br>
+              <span class='descricao-menu'>Configurações</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Produtos</a></li>
+              <li><a class="dropdown-item" href="#">Serviços</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown ocultar-menu">
+            <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-cogs"></i><br>
+              <span class='descricao-menu'>Configurações</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Produtos</a></li>
+              <li><a class="dropdown-item" href="#">Serviços</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown ocultar-menu">
+            <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-cogs"></i><br>
+              <span class='descricao-menu'>Configurações</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Produtos</a></li>
+              <li><a class="dropdown-item" href="#">Serviços</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown ocultar-menu">
+            <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-cogs"></i><br>
+              <span class='descricao-menu'>Configurações</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Produtos</a></li>
+              <li><a class="dropdown-item" href="#">Serviços</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active " href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-user"></i><br>
+              <span class='descricao-menu' id='arruma-titulo'>Área do cliente</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Produtos</a></li>
+              <li><a class="dropdown-item" href="#">Serviços</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="wrapper">
+    <nav id="sidebar">
+      <ul class="list-unstyled components" id='topSidebar'>
+        <li>
+          <a href="#informacionalSubmenu" data-toggle="collapse" aria-expanded="false">Informacional</a>
+          <ul class="collapse list-unstyled" id="informacionalSubmenu">
+            <li>
+              <a href="ramais.html">Ramais</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#relatoriosSubmenu" data-toggle="collapse" aria-expanded="false">Relatórios</a>
+          <ul class="collapse list-unstyled" id="relatoriosSubmenu">
+            <li>
+              <a href="relatorioschamadosfechados.html">Chamados Fechados</a>
+            </li>
+            <li>
+              <a href="relatorioscargaatual.html">Carga Atual</a>
+            </li>
+            <li>
+              <a href="relatoriosanalistaxcategoria.html">Analista X Categoria</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#usuariosSubmenu" data-toggle="collapse" aria-expanded="false">Usuários</a>
+          <ul class="collapse list-unstyled" id="usuariosSubmenu">
+            <li>
+              <a href="usuariosnovousuario.html">Novo Usuário</a>
+            </li>
+            <li>
+              <a href="usuariosusuariosativos.html">Usuários Ativos</a>
+            </li>
+            <li>
+              <a href="usuariosusuariosinativos.html">Usuários Inativos</a>
+            </li>
+            <li>
+              <a href="usuariossetores.html">Setores</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#qualidadeSubmenu" data-toggle="collapse" aria-expanded="false">Qualidade</a>
+          <ul class="collapse list-unstyled" id="qualidadeSubmenu">
+            <li>
+              <a href="qualidaderegistrarimagens.html">Registrar Imagens</a>
+            </li>
+            <li>
+              <a href="qualidadefotoscpnc.html">Fotos CPNC</a>
+            </li>
+            <li>
+              <a href="qualidadeabrirsolicitacao.html">Abrir Solicitação</a>
+            </li>
+            <li>
+              <a href="qualidademinhassolicitacoes.html">Minhas Solicitações</a>
+            </li>
+            <li>
+              <a href="qualidademinhastarefas.html">Minhas Tarefas</a>
+            </li>
+            <li>
+              <a href="qualidadegerirsolicitacoes.html">Gerir Solicitações</a>
+            </li>
+            <li>
+              <a href="qualidadefinalizados.html">Finalizados</a>
+            </li>
+            <li>
+              <a href="qualidadeconfigurarsetores.html">Configurar Setores</a>
+            </li>
+            <li>
+              <a href="qualidadecadastrarmotivoscpnc.html">Cadastrar Motivos CPNC</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#marketingSubmenu" data-toggle="collapse" aria-expanded="false">Marketing</a>
+          <ul class="collapse list-unstyled" id="marketingSubmenu">
+            <li>
+              <a href="marketingenviospesquisapormes.html">Envios Pesquisa por Mês</a>
+            </li>
+            <li>
+              <a href="marketingenviospesquisaporpedido.html">Envios Pesquisa por Pedido</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#documentosSubmenu" data-toggle="collapse" aria-expanded="false">Documentos</a>
+          <ul class="collapse list-unstyled" id="documentosSubmenu">
+            <li>
+              <a href="documentosgerardocumentos.html">Gerar Documentos</a>
+            </li>
+            <li>
+              <a href="documentosparaaprovacao.html">Para Aprovação</a>
+            </li>
+            <li>
+              <a href="documentosminhasemissoes.html">Minhas Emissões</a>
+            </li>
+            <li>
+              <a href="documentosemissoesdosetor.html">Emissões do Setor</a>
+            </li>
+            <li>
+              <a href="documentosalterarroteiro.html">Alterar Roteiro</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#segurancaSubmenu" data-toggle="collapse" aria-expanded="false">Segurança do Trabalho</a>
+          <ul class="collapse list-unstyled" id="segurancaSubmenu">
+            <li>
+              <a href="segurancasolicitacoes.html">Solicitações</a>
+            </li>
+            <li>
+              <a href="segurancasolicitar.html">Solicitar</a>
+            </li>
+            <li>
+              <a href="segurancasolicitacoesabertas.html">Solicitações Abertas</a>
+            </li>
+            <li>
+              <a href="segurancafinalizados.html">Finalizados</a>
+            </li>
+            <li>
+              <a href="segurancagerirsolicitacoes.html">Gerir Solicitações</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#rhSubmenu" data-toggle="collapse" aria-expanded="false">Recursos Humanos</a>
+          <ul class="collapse list-unstyled" id="rhSubmenu">
+            <li>
+              <a href="rhsolicitar.html">Solicitar</a>
+            </li>
+            <li>
+              <a href="rhminhassolicitacoes.html">Minhas Solicitações</a>
+            </li>
+            <li>
+              <a href="rhsolicitacoes.html">Solicitações</a>
+            </li>
+            <li>
+              <a href="rharquivados.html">Arquivados</a>
+            </li>
+            <li>
+              <a href="rhemterceiros.html">Em Terceiros</a>
+            </li>
+            <li>
+              <a href="rhgerirsolicitacoes.html">Gerir Solicitações</a>
+            </li>
+            <li>
+              <a href="rhcriardocumentoslgpd.html">Criar Documentos - LGPD</a>
+            </li>
+            <li>
+              <a href="rhvisualizarcriadoslgpd.html">Visualizar Criados - LGPD</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#lgpdSubmenu" data-toggle="collapse" aria-expanded="false">LGPD</a>
+          <ul class="collapse list-unstyled" id="lgpdSubmenu">
+            <li>
+              <a href="lgpdcriardocumentoslgpd.html">Criar Documentos - LGPD</a>
+            </li>
+            <li>
+              <a href="lgpdvisualizarcriadoslgpd.html">Visualizar Criados - LGPD</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#tecnologiaSubmenu" data-toggle="collapse" aria-expanded="false">Tecnologia da Informação</a>
+          <ul class="collapse list-unstyled" id="tecnologiaSubmenu">
+            <li>
+              <a href="timeuschamados.html">Meus Chamados</a>
+            </li>
+            <li>
+              <a href="tiabrirchamado.html">Abrir Chamado</a>
+            </li>
+            <li>
+              <a href="tiaprovardesenvolvimento.html">Aprovar Desenvolvimento</a>
+            </li>
+            <li>
+              <a href="tigerenciarchamados.html">Gerenciar Chamados</a>
+            </li>
+            <li>
+              <a href="tiemterceiros.html">Em Terceiros</a>
+            </li>
+            <li>
+              <a href="tifinalizados.html">Finalizados</a>
+            </li>
+            <li>
+              <a href="tioperacoes.html">Operações</a>
+            </li>
+            <li>
+              <a href="tinovaoperacao.html">Nova Operação</a>
+            </li>
+            <li>
+              <a href="tiinstrucoes.html">Instruções</a>
+            </li>
+            <li>
+              <a href="ticadastrarinstrucao.html">Cadastrar Instrução</a>
+            </li>
+            <li>
+              <a href="timovimentacoesdecomponentes.html">Movimentações de Componentes</a>
+            </li>
+            <li>
+              <a href="tichamadosdesenvolvimento.html">Chamados Desenvolvimento</a>
+            </li>
+            <li>
+              <a href="tichamadosrecorrentes.html">Chamados Recorrentes</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#manutpredSubmenu" data-toggle="collapse" aria-expanded="false">Manutenção Predial</a>
+          <ul class="collapse list-unstyled" id="manutpredSubmenu">
+            <li>
+              <a href="manutpredsolicitar.html">Solicitar</a>
+            </li>
+            <li>
+              <a href="manutpredminhassolicitacoes.html">Minhas Solicitaçoes</a>
+            </li>
+            <li>
+              <a href="manutpredsolicitacoesparaaprovar.html">Solicitações para Aprovar</a>
+            </li>
+            <li>
+              <a href="manutpredsolicitacoes.html">Solicitaçoes</a>
+            </li>
+            <li>
+              <a href="manutpredfinalizados.html">Finalizados</a>
+            </li>
+            <li>
+              <a href="manutpredemterceiros.html">Em Terceiros</a>
+            </li>
+            <li>
+              <a href="manutpredmovimentacoesdecomponentes.html">Movimentações de Componentes</a>
+            </li>
+            <li>
+              <a href="manutpredgerirsolicitacoes.html">Gerir Solicitações</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#manutindSubmenu" data-toggle="collapse" aria-expanded="false">Manutenção Industrial</a>
+          <ul class="collapse list-unstyled" id="manutindSubmenu">
+            <li>
+              <a href="manutindsolicitar.html">Solicitar</a>
+            </li>
+            <li>
+              <a href="manutindminhassolicitacoes.html">Minhas Solicitaçoes</a>
+            </li>
+            <li>
+              <a href="manutindsolicitacoes.html">Solicitações</a>
+            </li>
+            <li>
+              <a href="manutindfinalizados.html">Finalizados</a>
+            </li>
+            <li>
+              <a href="manutindterceiros.html">Terceiros</a>
+            </li>
+            <li>
+              <a href="manutindmovimentacoesdecomponentes.html">Movimentações de Componentes</a>
+            </li>
+            <li>
+              <a href="manutindgerirsolicitacoes.html">Gerir Solicitações</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#financeiroSubmenu" data-toggle="collapse" aria-expanded="false">Financeiro</a>
+          <ul class="collapse list-unstyled" id="financeiroSubmenu">
+            <li>
+              <a href="financeiroviagens.html">Viagens</a>
+            </li>
+            <li>
+              <a href="financeirogestorviagens.html">Gestor Viagens</a>
+            </li>
+            <li>
+              <a href="financeirocontas.html">Contas</a>
+            </li>
+            <li>
+              <a href="financeirocadastros.html">Cadastros</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#reservasSubmenu" data-toggle="collapse" aria-expanded="false">Reservas</a>
+          <ul class="collapse list-unstyled" id="reservasSubmenu">
+            <li>
+              <a href="reservassaladereuniao.html">Sala de reunião</a>
+            </li>
+            <li>
+              <a href="reservasveiculos.html">Veículos</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#portariaSubmenu" data-toggle="collapse" aria-expanded="false">Portaria Fiscal</a>
+          <ul class="collapse list-unstyled" id="portariaSubmenu">
+            <li>
+              <a href="agendarrecebimento.html">Agendar Recebimento</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#workflowSubmenu" data-toggle="collapse" aria-expanded="false">Workflow</a>
+          <ul class="collapse list-unstyled" id="workflowSubmenu">
+            <li>
+              <a href="workflowaprovarsolicitacoes.html">Aprovar Solicitações</a>
+            </li>
+            <li>
+              <a href="workflowsolicitacoes.html">Solicitações</a>
+            </li>
+            <li>
+              <a href="workflowconfiguracoes.html">Configurações</a>
+            </li>
+            <li>
+              <a href="workflowparametros.html">Parâmetros</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#relatSubmenu" data-toggle="collapse" aria-expanded="false">Relatórios</a>
+          <ul class="collapse list-unstyled" id="relatSubmenu">
+            <li>
+              <a href="relatorios2relatoriodeproduto.html">Relatório de Produto</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#controladoriaSubmenu" data-toggle="collapse" aria-expanded="false">Controladoria</a>
+          <ul class="collapse list-unstyled" id="controladoriaSubmenu">
+            <li>
+              <a href="controladoriasolicitacoes.html">Solicitações</a>
+            </li>
+            <li>
+              <a href="controladoriasolicitar.html">Solicitar</a>
+            </li>
+            <li>
+              <a href="controladoriasolicitacoesabertas.html">Solicitações Abertas</a>
+            </li>
+            <li>
+              <a href="controladoriafinalizados.html">Finalizados</a>
+            </li>
+            <li>
+              <a href="controladoriaprodutosajustados.html">Produtos Ajustados</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#processosSubmenu" data-toggle="collapse" aria-expanded="false">Processos</a>
+          <ul class="collapse list-unstyled" id="processosSubmenu">
+            <li>
+              <a href="processossolicitacoes.html">Solicitações</a>
+            </li>
+            <li>
+              <a href="processossolicitar.html">Solicitar</a>
+            </li>
+            <li>
+              <a href="processossolicitacoesabertas.html">Solicitações Abertas</a>
+            </li>
+            <li>
+              <a href="processosfinalizados.html">Finalizados</a>
+            </li>
+            <li>
+              <a href="processosgerenciar.html">Gerenciar</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#pcpSubmenu" data-toggle="collapse" aria-expanded="false">PCP</a>
+          <ul class="collapse list-unstyled" id="pcpSubmenu">
+            <li>
+              <a href="pcplistas.html">Listas</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="row" id='rowPrimeira'>
+      <div class="row" id='descritivoCadastro'>
+        <div class="col-lg-12">
+          <h3 class='descritivoCadastro'>Centro de Custo</h3>
+        </div>
+      </div>
+      <div class="accordion" id="accordionExample">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                1 - Administrativo Financeiro
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">CÓDIGO</th>
+                    <th scope="col">CLASSIFICAÇÃO</th>
+                    <th scope="col">NÚMERO</th>
+                    <th scope="col">C. CUSTO</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1100</td>
+                    <td>1.10</td>
+                    <td>10</td>
+                    <td>1100 - GESTÃO ADMINISTRATIVA</td>
+                  </tr>
+                  <tr>
+                    <td>1110</td>
+                    <td>1.11</td>
+                    <td>11</td>
+                    <td>1110 - DIRETORIA</td>
+                  </tr>
+                  <tr>
+                    <td>1120</td>
+                    <td>1.12</td>
+                    <td>12</td>
+                    <td>1120 - ADMINISTRATIVO FINANCEIRO</td>
+                  </tr>
+                  <tr>
+                    <td>1121</td>
+                    <td>1.13</td>
+                    <td>13</td>
+                    <td>1121 - MANUTENÇÃO PREDIAL</td>
+                  </tr>
+                  <tr>
+                    <td>1130</td>
+                    <td>1.14</td>
+                    <td>14</td>
+                    <td>1130 - RECURSOS HUMANOS</td>
+                  </tr>
+                  <tr>
+                    <td>1131</td>
+                    <td>1.15</td>
+                    <td>15</td>
+                    <td>1131 - SSMA SAÚDE, SEGURANÇA E MEIO AMBIENTE</td>
+                  </tr>
+                  <tr>
+                    <td>1140</td>
+                    <td>1.16</td>
+                    <td>16</td>
+                    <td>1140 - TECNOLOGIA DA INFORMAÇÃO</td>
+                  </tr>
+                  <tr>
+                    <td>1150</td>
+                    <td>1.17</td>
+                    <td>17</td>
+                    <td>1150 - SUPRIMENTOS / COMPRAS</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                2 - Administrativo Fábrica
+              </button>
+            </h5>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">CÓDIGO</th>
+                    <th scope="col">CLASSIFICAÇÃO</th>
+                    <th scope="col">NÚMERO</th>
+                    <th scope="col">C. CUSTO</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2110</td>
+                    <td>2.11</td>
+                    <td>11</td>
+                    <td>LOGÍSTICA / PLANEJAMENTO</td>
+                  </tr>
+                  <tr>
+                    <td>2115</td>
+                    <td>2.12</td>
+                    <td>12</td>
+                    <td>2115 - CONTROLE</td>
+                  </tr>
+                  <tr>
+                    <td>2120</td>
+                    <td>2.13</td>
+                    <td>13</td>
+                    <td>ALMOXARIFADO LOG</td>
+                  </tr>
+                  <tr>
+                    <td>2130</td>
+                    <td>2.14</td>
+                    <td>14</td>
+                    <td>2130 - LOGÍSTICA / DISTRIBUIÇÃO</td>
+                  </tr>
+                  <tr>
+                    <td>2140</td>
+                    <td>2.15</td>
+                    <td>15</td>
+                    <td>2140 - QUALIDADE ADM</td>
+                  </tr>
+                  <tr>
+                    <td>2142</td>
+                    <td>2.16</td>
+                    <td>16</td>
+                    <td>2142 - DEPARTAMENTO TÉCNICO</td>
+                  </tr>
+                  <tr>
+                    <td>2141</td>
+                    <td>2.17</td>
+                    <td>17</td>
+                    <td>QUALIDADE SGQ</td>
+                  </tr>
+                  <tr>
+                    <td>2150</td>
+                    <td>2.18</td>
+                    <td>18</td>
+                    <td>PCP</td>
+                  </tr>
+                  <tr>
+                    <td>2160</td>
+                    <td>2.19</td>
+                    <td>19</td>
+                    <td>PQ PINHAIS</td>
+                  </tr>
+                  <tr>
+                    <td>2161</td>
+                    <td>2.20</td>
+                    <td>20</td>
+                    <td>CD PINHAIS</td>
+                  </tr>
+                  <tr>
+                    <td>2170</td>
+                    <td>2.21</td>
+                    <td>21</td>
+                    <td>CD SP JUNDIAI</td>
+                  </tr>
+                  <tr>
+                    <td>2180</td>
+                    <td>2.22</td>
+                    <td>22</td>
+                    <td>CD ES LINHARES</td>
+                  </tr>
+                  <tr>
+                    <td>2190</td>
+                    <td>2.23</td>
+                    <td>23</td>
+                    <td>FABRICA ES LINHARES</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                3 - Produção
+              </button>
+            </h5>
+          </div>
+          <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">CÓDIGO</th>
+                    <th scope="col">CLASSIFICAÇÃO</th>
+                    <th scope="col">NÚMERO</th>
+                    <th scope="col">C. CUSTO</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>3110</td>
+                    <td>3.10</td>
+                    <td>10</td>
+                    <td>3110 - GESTÃO DA PRODUÇÃO</td>
+                  </tr>
+                  <tr>
+                    <td>3111</td>
+                    <td>3.11</td>
+                    <td>11</td>
+                    <td>11 ENERGIA ELÉTRICA - PRODUÇÃO</td>
+                  </tr>
+                  <tr>
+                    <td>3112</td>
+                    <td>3.12</td>
+                    <td>12</td>
+                    <td>ALUGUEL PRODUÇÃO</td>
+                  </tr>
+                  <tr>
+                    <td>3113</td>
+                    <td>3.13</td>
+                    <td>13</td>
+                    <td>3113 - LOGÍSTICA FÁBRICA</td>
+                  </tr>
+                  <tr>
+                    <td>3114</td>
+                    <td>3.14</td>
+                    <td>14</td>
+                    <td>3114 - QUALIDADE FABRIL</td>
+                  </tr>
+                  <tr>
+                    <td>3115</td>
+                    <td>3.15</td>
+                    <td>15</td>
+                    <td>3115 - PCP</td>
+                  </tr>
+                  <tr>
+                    <td>3116</td>
+                    <td>3.16</td>
+                    <td>16</td>
+                    <td>3116 - MANUTENÇÃO IND</td>
+                  </tr>
+                  <tr>
+                    <td>3120</td>
+                    <td>3.20</td>
+                    <td>18</td>
+                    <td>PCP</td>
+                  </tr>
+                  <tr>
+                    <td>3121</td>
+                    <td>3.21</td>
+                    <td>21</td>
+                    <td>3121 - FERRAMENTARIA MANUTENÇÃO</td>
+                  </tr>
+                  <tr>
+                    <td>3130</td>
+                    <td>3.21</td>
+                    <td>21</td>
+                    <td>3130 - PINTURA BANHO</td>
+                  </tr>
+                  <tr>
+                    <td>3131</td>
+                    <td>3.22</td>
+                    <td>22</td>
+                    <td>3131 - SERIGRAFIA</td>
+                  </tr>
+                  <tr>
+                    <td>3140</td>
+                    <td>3.22</td>
+                    <td>22</td>
+                    <td>3140 - MONTAGEM CEO / SPLITTER</td>
+                  </tr>
+                  <tr>
+                    <td>3141</td>
+                    <td>3.23</td>
+                    <td>23</td>
+                    <td>3141 - LINHA DE KIT</td>
+                  </tr>
+                  <tr>
+                    <td>3150</td>
+                    <td>3.24</td>
+                    <td>24</td>
+                    <td>3150 - ESTAMPARIA / SOLDA / ACABAMENTO</td>
+                  </tr>
+                  <tr>
+                    <td>3160</td>
+                    <td>3.25</td>
+                    <td>25</td>
+                    <td>3160 - CABOS</td>
+                  </tr>
+                  <tr>
+                    <td>3170</td>
+                    <td>3.26</td>
+                    <td>26</td>
+                    <td>3170 - MONTAGEM METAL</td>
+                  </tr>
+                  <tr>
+                    <td>3180</td>
+                    <td>3.27</td>
+                    <td>27</td>
+                    <td>3180 - MONTAGEM ÓPTICA/DIO</td>
+                  </tr>
+                  <tr>
+                    <td>3190</td>
+                    <td>3.28</td>
+                    <td>28</td>
+                    <td>3190 - CONECTORIZAÇÃO</td>
+                  </tr>
+                  <tr>
+                    <td>3195</td>
+                    <td>3.29</td>
+                    <td>29</td>
+                    <td>3195 - INJEÇÃO</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src='public/propostacomercial.js'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>

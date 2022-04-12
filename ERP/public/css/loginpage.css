@@ -27,6 +27,7 @@ p{
   border-radius: 10px;
   min-width: 100%;
   max-width: 100%;
+  display: block;
 }
 
 #titulo{
@@ -39,6 +40,7 @@ p{
   border-radius: 10px;
   min-width: 100%;
   max-width: 100%;
+  display: block;
 }
 
 .card-body{
